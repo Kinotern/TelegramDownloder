@@ -1,0 +1,33 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "assets/image/logo.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "js/background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "js/teleram-contentScript.js" ],
+      "matches": [ "https://web.telegram.org/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_desc__",
+   "host_permissions": [ "https://web.telegram.org/*" ],
+   "icons": {
+      "128": "assets/image/logo.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwd/cB5RHXliIf2xVuMqx/dWEowUBvxNq6N49pa8oGxirfW9ed6+meOXsuLeIj0i/yQcnXXqpLLDhl194vH0PhmrJuoeXYgr0+Yw/QFXJHR56KV76KfWM0EboMTDK33/IbNr5cBnpOH7xcCthRaghxi54GWGVZkt1F6Kyv50x6VezyV0fqRvGORbASHBz6hbUkcUVbSdOtZP3ffv1uYyXek0htxKej2J4Ud2b3JbGuRS43I/8E/0RWF1YwDQcYAgvxiu/wnG20EdndTKyYtHVOAuxjuBRyRvy0cuMZ+08vcYnhGxfdLbSPBs9YBIuNTodtGoDks+KEt69VB2faKB/9QIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_name__",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0.3",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "js/teleram-iniectJs.js", "fonts/", "*", "assets/*", "img/*" ]
+   } ]
+}
